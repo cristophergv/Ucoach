@@ -31,11 +31,12 @@
                 {{CONTENT}}
             </article>
         </aside>
-        <section id="menu" data-transition="slide">
-            <header data-title="Ucoach">
+        <section id="inicio" data-transition="slide">
+            <header>
                 <nav>
                     <button data-view-aside="features" data-icon="menu"></button>
                 </nav>
+                <div class="centered title">Ucoach</div>
                 <nav class="on-right">
                     <a href="#" data-view-menu="options-icons" data-icon="grid"></a>
                 </nav>
@@ -46,18 +47,64 @@
                 <a href="#" data-view-article="activity-menu" data-icon="comments">Activity</a>
                 <a href="#" data-view-article="profile-menu" data-icon="user">Profile</a>
             </nav>
-            <article id="main-article" class="active">
-                {{CONTENT}}
+            <article id="primero" class="active block" data-control="carousel">
+                <div>
+                    <div align="center">
+                        <img src="http://lorempixel.com/320/418/food/">
+                    </div>
+                    <div align="center">
+                        <img src="http://lorempixel.com/320/418/sports/">
+                    </div>
+                </div>
             </article>
+            
             <footer>
                 <nav>
-                    <a href="#" data-icon="menu" class="active"></a>
-                    <a href="#" data-icon="share">Inicio</a>
-                    <a href="#" data-icon="user" data-title="Proyectos"></a>
-                    <a href="#" data-icon="users"></a>
+                    <a href="#" data-icon="home" data-view-section="inicio" data-title="Ucoach" class="active"></a>
+                    <a href="#" data-view-section="proyectos" data-title="Segundo" data-icon="picture"></a>
+                    <a href="#" data-icon="phone"></a>
                 </nav>
             </footer>
         </section>     
+        
+        
+        <section id="proyectos" data-transition="slide">
+            <header>
+                <nav>
+                    <button data-view-aside="features" data-icon="menu"></button>
+                </nav>
+                <div class="centered title">Proyectos</div>
+                <nav class="on-right">
+                    <a href="#" data-view-menu="options-icons" data-icon="grid"></a>
+                </nav>
+            </header>  
+            <nav id="options-icons" data-control="menu">
+                <a href="#" data-view-article="home-menu" data-icon="menu">Mundo</a>
+                <a href="#" data-view-section="hola-mundo" data-icon="globe">Hola mundo</a>
+                <a href="#" data-view-article="activity-menu" data-icon="comments">Activity</a>
+                <a href="#" data-view-article="profile-menu" data-icon="user">Profile</a>
+            </nav>
+            <article id="primero" class="active block" data-control="carousel">
+                <div>
+                    <div align="center">
+                        <img src="http://lorempixel.com/320/418/food/">
+                    </div>
+                    <div align="center">
+                        <img src="http://lorempixel.com/320/418/sports/">
+                    </div>
+                </div>
+            </article>
+            
+            <footer>
+                <nav>
+                    <a href="#" data-icon="home" data-view-section="inicio" data-title="Ucoach"></a>
+                    <a href="#" data-view-section="proyectos" data-icon="picture" class="active"></a>
+                    <a href="#" data-icon="phone"></a>
+                </nav>
+            </footer>
+        </section> 
+        
+        
         
         <!-- LungoJS - Sandbox App -->
         <script>
@@ -65,6 +112,21 @@
                 name: 'Ucoach',
                 version: '1.0',
             });
+			var afterNotification = function(){
+				//Do something
+			};
+			Lungo.Notification.show(
+				"check",                //Icon
+				"Success",              //Title
+				3,                      //Seconds
+				afterNotification       //Callback function
+			);
+			$$('header').tap(function() {
+				// affects "span" children/grandchildren
+				Lungo.Notification.show();
+			});
+						
+			
         </script>
     </body>
 </html>

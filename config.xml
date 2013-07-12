@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id      = "org.trinug.mobile.phonegap"
+    version    = "1.0.1">
+
+    
+<name>Ucoach</name>
+ 
+<description>
+App Ucoach. 
+</description>
+ 
+<author href="http://www.hilorojoestudio.com" email="contacto@hilorojoestudio.com">
+	Hilo Rojo Estudio 
+</author>
+<preference name="phonegap-version" value="2.9.0" />
+ 
+<!-- icons -->
+<icon src="icon_057.png" gap:role="default" />
+<icon src="Content/images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="Content/images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="Content/images/icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="splash.png" />
+<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi"/>
+<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi"/>
+<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi"/>
+ 
+<!-- api access -->
+<feature name="http://api.phonegap.com/1.0/geolocation"/>
+<feature name="http://api.phonegap.com/1.0/media"/>
+<feature name="http://api.phonegap.com/1.0/network"/>
+<feature name="http://api.phonegap.com/1.0/notification"/>
+<access origin="*" />
+ 
+<preference name="orientation" value="default" />
+<preference name="target-device" value="universal" />
+<preference name="fullscreen" value="true" />
+
+</widget>
