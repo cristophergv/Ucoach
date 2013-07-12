@@ -112,20 +112,14 @@
                 name: 'Ucoach',
                 version: '1.0',
             });
-			var afterNotification = function(){
-				//Do something
-			};
-			Lungo.Notification.show(
-				"check",                //Icon
-				"Success",              //Title
-				3,                      //Seconds
-				afterNotification       //Callback function
-			);
-			$$('header').tap(function() {
-				// affects "span" children/grandchildren
-				Lungo.Notification.show();
+			
+			
+			$$('body').swipeRight(function() {
+				Lungo.Aside.show("features");
 			});
-						
+			$$('body').swipeLeft(function() {
+				Lungo.Aside.hide("features");
+			});			
 			
         </script>
     </body>
