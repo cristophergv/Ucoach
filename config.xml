@@ -5,7 +5,7 @@
     version    = "1.0.1">
 
     
-<name>Ucoach</name>
+<name>Dress4aday</name>
  
 <description>
 App Ucoach. 
@@ -33,8 +33,8 @@ App Ucoach.
 <feature name="http://api.phonegap.com/1.0/notification"/>
 <access origin="*" />
  
-<preference name="orientation" value="default" />
-<preference name="target-device" value="universal" />
+<preference name="orientation" value="portrait" />
+<preference name="target-device" value="handset" />
 <preference name="fullscreen" value="true" />
 
 </widget>

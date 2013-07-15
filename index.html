@@ -1,126 +1,240 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Ucoach</title>
-    <meta name="description" content="">
-    <meta name="author" content="Cristopher González Vega">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="cleartype" content="on">
-<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<title>Hello World</title>-->
-
+    <head>
+        <meta charset="utf-8">
+        <title>Dress4aday</title>
+        <meta name="description" content="">
+        <meta name="author" content="Cristopher González Vega">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="cleartype" content="on">
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>-->
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="lungo/lungo.css">
-    <link rel="stylesheet" href="lungo/lungo.icon.css">
-    <link rel="stylesheet" href="lungo/lungo.theme.css">
-    <script type="text/javascript" src="cordova.js"></script>
-    <!-- Lungo dependencies -->
-    <script src="quojs/quo.js"></script>
-    <script src="lungo/lungo.js"></script>
+        <link rel="stylesheet" href="js/lungo/lungo.css">
+        <link rel="stylesheet" href="js/lungo/lungo.icon.css">
+        <link rel="stylesheet" href="js/lungo/lungo.theme.css">
+        <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body>
-    	<aside id="features">
-            <header data-title="Options"></header>
-            <article class="active">
-                {{CONTENT}}
+    	<aside data-transition="left" id="lateral">
+            <header data-title="Menu"></header>
+            <article class="list active">
+                <ul>
+                    <li data-view-aside="right"><strong><a href="#" data-view-section="inicio"   data-icon="home" data-label="inicio"></a></strong>
+                    </li>
+                    <li data-view-aside="right"><strong><a href="#" data-view-section="proyectos"   data-icon="briefcase" data-label="Proyectos"></a></strong>
+                    </li>
+                    <li data-view-aside="right"><strong><a href="#" data-view-section="tareas"   data-icon="tasks" data-label="Tareas"></a></strong>
+                    </li>
+                    <li data-view-aside="right"><strong><a href="#" data-view-section="ayuda"   data-icon="medkit" data-label="Ayuda"></a></strong>
+                    </li>
+                    <li data-view-aside="right"><strong><a href="#" data-view-section="splash"   data-icon="signout" data-label="Salir"></a></strong>
+                    </li>
+                </ul>
             </article>
         </aside>
+        <!--###############   SPLASH   ################-->
+        <section id="splash" data-transition="cover">  
+            <article id="splash-art-1" class="active indented splash">
+                <h1><img src="img/logo-transparente.png" width="275px" class="splash-logo"></h1>
+                <form>
+                	<input type="text" placeholder="Usuario" value="">
+                    <input type="password" placeholder="Contraseña" value="">
+                    <a href="#" data-view-section="inicio"   class="button dmx-theme big" data-icon="user" data-label="Ingresar"></a>
+                </form>
+            </article>
+        </section>
+        
+        <!--###############   INICIO   ################-->
         <section id="inicio" data-transition="slide">
-            <header>
-                <nav>
-                    <button data-view-aside="features" data-icon="menu"></button>
+            <header data-title="GrupoDMX">
+                 <nav>
+                    <button data-view-aside="lateral" data-icon="menu"></button>
                 </nav>
-                <div class="centered title">Ucoach</div>
-                <nav class="on-right">
-                    <a href="#" data-view-menu="options-icons" data-icon="grid"></a>
+                <nav class="on-right box">
+                	<a href="#" data-view-section="splash"  data-icon="signout"></a>
                 </nav>
             </header>  
-            <nav id="options-icons" data-control="menu">
-                <a href="#" data-view-article="home-menu" data-icon="menu">Mundo</a>
-                <a href="#" data-view-section="hola-mundo" data-icon="globe">Hola mundo</a>
-                <a href="#" data-view-article="activity-menu" data-icon="comments">Activity</a>
-                <a href="#" data-view-article="profile-menu" data-icon="user">Profile</a>
-            </nav>
-            <article id="primero" class="active block" data-control="carousel">
-                <div>
-                    <div align="center">
-                        <img src="http://lorempixel.com/320/418/food/">
-                    </div>
-                    <div align="center">
-                        <img src="http://lorempixel.com/320/418/sports/">
-                    </div>
-                </div>
+            <article id="inicio-art-1" class="active block">
+                
+
             </article>
             
             <footer>
-                <nav>
-                    <a href="#" data-icon="home" data-view-section="inicio" data-title="Ucoach" class="active"></a>
-                    <a href="#" data-view-section="proyectos" data-title="Segundo" data-icon="picture"></a>
-                    <a href="#" data-icon="phone"></a>
+                <nav class="with-labels">
+                    <a href="#" data-view-section="inicio"   data-icon="home" data-label="inicio" data-title="Ucoach" class="active"></a>
+                    <a href="#" data-view-section="proyectos" data-title="Proyectos" data-icon="briefcase" data-label="Proyectos"></a>
+                    <a href="#" data-view-section="tareas" data-title="Tareas" data-icon="tasks" data-label="Tareas"></a>
+                    <a href="#" data-view-section="ayuda" data-title="Ayuda" data-icon="medkit" data-label="Ayuda"></a>
                 </nav>
             </footer>
         </section>     
         
-        
+        <!--###############   PROYECTOS   ################-->
         <section id="proyectos" data-transition="slide">
-            <header>
-                <nav>
-                    <button data-view-aside="features" data-icon="menu"></button>
-                </nav>
-                <div class="centered title">Proyectos</div>
-                <nav class="on-right">
-                    <a href="#" data-view-menu="options-icons" data-icon="grid"></a>
+            <header data-back="arrow-left" data-title="Proyectos">
+            	<nav class="on-right box">
+                	<a href="#" data-view-section="splash"   data-icon="signout"></a>
                 </nav>
             </header>  
-            <nav id="options-icons" data-control="menu">
-                <a href="#" data-view-article="home-menu" data-icon="menu">Mundo</a>
-                <a href="#" data-view-section="hola-mundo" data-icon="globe">Hola mundo</a>
-                <a href="#" data-view-article="activity-menu" data-icon="comments">Activity</a>
-                <a href="#" data-view-article="profile-menu" data-icon="user">Profile</a>
-            </nav>
-            <article id="primero" class="active block" data-control="carousel">
-                <div>
-                    <div align="center">
-                        <img src="http://lorempixel.com/320/418/food/">
+            <article id="proyectos-art-1" class="active indented scroll" >
+                <div class="layout">
+                	<div>
+                        <div class="layout horizontal">
+                            <div style="background: #ddd;">Saludos </div>
+                            <div style="background: #bbb;"> mas </div>
+                        </div>
                     </div>
-                    <div align="center">
-                        <img src="http://lorempixel.com/320/418/sports/">
+                    <div>
+                        <div class="layout horizontal">
+                            <div style="background: #ddd;">Saludos </div>
+                            <div style="background: #bbb;"> mas </div>
+                        </div>
                     </div>
                 </div>
             </article>
-            
             <footer>
-                <nav>
-                    <a href="#" data-icon="home" data-view-section="inicio" data-title="Ucoach"></a>
-                    <a href="#" data-view-section="proyectos" data-icon="picture" class="active"></a>
-                    <a href="#" data-icon="phone"></a>
+                <nav class="with-labels">
+                    <a href="#" data-view-section="inicio"   data-icon="home" data-label="inicio" data-title="Ucoach"></a>
+                    <a href="#" data-view-section="proyectos" data-title="Proyectos" data-icon="briefcase" data-label="Proyectos" class="active"></a>
+                    <a href="#" data-view-section="tareas" data-title="Tareas" data-icon="tasks" data-label="Tareas"></a>
+                    <a href="#" data-view-section="ayuda" data-title="Ayuda" data-icon="medkit" data-label="Ayuda"></a>
                 </nav>
             </footer>
-        </section> 
+        </section>
+        
+        <!--###############   TAREAS   ################-->
+        <section id="tareas" data-transition="slide">
+            <header data-back="arrow-left" data-title="Tareas">
+            	<nav class="on-right box">
+                	<a href="#" data-view-section="splash"   data-icon="signout"></a>
+                </nav>
+            </header>   
+            <article id="tareas-art-1" class="active block scroll list indented" >
+                <ul>
+                	<li id="34" class="selectable arrow blue" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow red" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow green" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow blue" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow red" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow green" data-icon="pushpin red"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                     <li id="34" class="selectable arrow" data-icon="pushpin"> 
+                        	<div>
+                            	<div class="on-right bubble red">11/22/2013</div>
+                                <strong>Levantar el piso externo</strong>
+                                <small>
+                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
+                                </small>
+                            </div>
+                     </li>
+                 </ul>
+            </article>
+            
+            <footer>
+                <nav class="with-labels">
+                    <a href="#" data-view-section="inicio"   data-icon="home" data-label="inicio" data-title="Ucoach"></a>
+                    <a href="#" data-view-section="proyectos" data-title="Proyectos" data-icon="briefcase" data-label="Proyectos"></a>
+                    <a href="#" data-view-section="tareas" data-title="Tareas" data-icon="tasks" data-label="Tareas" class="active"></a>
+                    <a href="#" data-view-section="ayuda" data-title="Ayuda" data-icon="medkit" data-label="Ayuda"></a>
+                </nav>
+            </footer>
+        </section>
+        
+        
+        <!--###############   AYUDA   ################-->
+        <section id="ayuda" data-transition="slide">
+            <header data-back="arrow-left" data-title="Ayuda">
+            	<nav class="on-right box">
+                	<a href="#" data-view-section="splash"   data-icon="signout" ></a>
+                </nav>
+            </header>  
+            <article id="ayuda-art-1" class="active block" >
+                Ayuda
+            </article>
+            
+            <footer>
+                <nav class="with-labels">
+                    <a href="#" data-view-section="inicio"   data-icon="home" data-label="inicio" data-title="Ucoach" class=""></a>
+                    <a href="#" data-view-section="proyectos" data-title="Proyectos" data-icon="briefcase" data-label="Proyectos"></a>
+                    <a href="#" data-view-section="tareas" data-title="Tareas" data-icon="tasks" data-label="Tareas"></a>
+                    <a href="#" data-view-section="ayuda" data-title="Ayuda" data-icon="medkit" data-label="Ayuda" class="active"></a>
+                </nav>
+            </footer>
+        </section>
         
         
         
-        <!-- LungoJS - Sandbox App -->
-        <script>
-            Lungo.init({
-                name: 'Ucoach',
-                version: '1.0',
-            });
-			
-			
-			$$('body').swipeRight(function() {
-				Lungo.Aside.show("features");
-			});
-			$$('body').swipeLeft(function() {
-				Lungo.Aside.hide("features");
-			});			
-			
-        </script>
+        
+        <script type="text/javascript" src="js/mustache.js"></script>
+		<script type="text/javascript" src="js/constantes.js"></script>
+        <!-- Lungo dependencies -->
+        <script src="js/quojs/quo.js"></script>
+        <script src="js/lungo/lungo.js"></script>
+        <script src="app/eventos.js"></script>
+        <script src="app/datos.js"></script>
+        <script src="app/init.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
