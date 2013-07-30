@@ -1,12 +1,36 @@
 // JavaScript Document	
+function afterNotification() {
+};
 Lungo.Events.init({
 	'swipeRight body' :function() {
 		Lungo.Aside.show("lateral");
 	},
 	'swipeLeft body' :function() {
 		Lungo.Aside.hide();
+	},
+	'tap section#splash a' :function() {
+		usuario = $$('section#splash input[type=text]').val();
+		password = $$('section#splash input[type=password]').val();
+		$$('section#splash input[type=password]').val("");
+		if(usuario == 1 && password == 1) {
+			
+			Lungo.Router.section("inicio");
+			
+		}
+		else {
+			Lungo.Notification.error(
+				"Error",                      //Title
+				"Usuario y/o Contraseña no validos",     //Description
+				"cancel",                     //Icon
+				3,                            //Time on screen
+				afterNotification             //Callback function
+			);
+		}
+	},
+	'tap a#cap-foto' :function() {
+		var opciones = {sourceType:Camera.PictureSourceType.CAMERA, destinationType: Camera.DestinationType.FILE_URI, saveToPhotoAlbum:true};
+		navigator.camera.getPicture(seTomo,noseTomo, opciones);
 	}
-	
 	/*'tap section footer a:nth-child(2)' :function() {
 		Lungo.Notification.show();
 		$$.ajax({

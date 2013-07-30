@@ -11,16 +11,18 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="cleartype" content="on">
-    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>-->
-    <!-- Main Stylesheet -->
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>-->
+        <!-- Main Stylesheet -->
         <link rel="stylesheet" href="js/lungo/lungo.css">
         <link rel="stylesheet" href="js/lungo/lungo.icon.css">
         <link rel="stylesheet" href="js/lungo/lungo.theme.css">
         <link rel="stylesheet" href="css/estilos.css">
+        
     </head>
     <body>
+    
     	<aside data-transition="left" id="lateral">
             <header data-title="Menu"></header>
             <article class="list active">
@@ -38,14 +40,40 @@
                 </ul>
             </article>
         </aside>
+         <!--###############   AYUDA   ################-->
+        <section id="ayuda" data-transition="slide">
+            <header data-back="arrow-left" data-title="Ayuda">
+            	<nav class="on-right box">
+                	<a href="#" data-view-section="splash"   data-icon="signout" ></a>
+                </nav>
+            </header>  
+            <article id="ayuda-art-1" class="active block" >
+            	<input type="text" placeholder="Ingresa de que tratan las fotos" />
+            	<a href="#" class="button big" data-title="Tomar foto" id="cap-foto" data-icon="camera"></a>
+                <div class="bloque-fotos">
+                	
+                </div>
+            </article>
+            
+            <footer>
+                <nav class="with-labels">
+                    <a href="#" data-view-section="inicio"   data-icon="home" data-label="inicio" data-title="Ucoach" class=""></a>
+                    <a href="#" data-view-section="proyectos" data-title="Proyectos" data-icon="briefcase" data-label="Proyectos"></a>
+                    <a href="#" data-view-section="tareas" data-title="Tareas" data-icon="tasks" data-label="Tareas"></a>
+                    <a href="#" data-view-section="ayuda" data-title="Ayuda" data-icon="medkit" data-label="Ayuda" class="active"></a>
+                </nav>
+            </footer>
+        </section>
+        
+        
         <!--###############   SPLASH   ################-->
         <section id="splash" data-transition="cover">  
-            <article id="splash-art-1" class="active indented splash">
+            <article id="splash-art-1" class="indented splash">
                 <h1><img src="img/logo-transparente.png" width="275px" class="splash-logo"></h1>
                 <form>
                 	<input type="text" placeholder="Usuario" value="">
                     <input type="password" placeholder="Contraseña" value="">
-                    <a href="#" data-view-section="inicio"   class="button dmx-theme big" data-icon="user" data-label="Ingresar"></a>
+                    <a href="#"  class="button dmx-theme big" data-icon="user" data-label="Ingresar"></a>
                 </form>
             </article>
         </section>
@@ -117,7 +145,7 @@
             </header>   
             <article id="tareas-art-1" class="active block scroll list indented" >
                 <ul>
-                	<li id="34" class="selectable arrow blue" data-icon="pushpin"> 
+                	<li id="34" class="selectable arrow blue" data-icon="pushpin" data-view-article="tareas-art-2"> 
                         	<div>
                             	<div class="on-right bubble red">11/22/2013</div>
                                 <strong>Levantar el piso externo</strong>
@@ -126,69 +154,7 @@
                                 </small>
                             </div>
                      </li>
-                     <li id="34" class="selectable arrow red" data-icon="pushpin"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
-                     <li id="34" class="selectable arrow green" data-icon="pushpin"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
-                     <li id="34" class="selectable arrow" data-icon="pushpin"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
-                     <li id="34" class="selectable arrow blue" data-icon="pushpin"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
-                     <li id="34" class="selectable arrow red" data-icon="pushpin"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
-                     <li id="34" class="selectable arrow green" data-icon="pushpin red"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
-                     <li id="34" class="selectable arrow" data-icon="pushpin"> 
-                        	<div>
-                            	<div class="on-right bubble red">11/22/2013</div>
-                                <strong>Levantar el piso externo</strong>
-                                <small>
-                                	Es critico realizar el levantado del piso antes que cualquier otra cosa
-                                </small>
-                            </div>
-                     </li>
+                     
                  </ul>
             </article>
             
@@ -202,8 +168,7 @@
             </footer>
         </section>
         
-        
-        <!--###############   AYUDA   ################-->
+        <!--###############   AYUDA   ################
         <section id="ayuda" data-transition="slide">
             <header data-back="arrow-left" data-title="Ayuda">
             	<nav class="on-right box">
@@ -211,7 +176,7 @@
                 </nav>
             </header>  
             <article id="ayuda-art-1" class="active block" >
-                Ayuda
+            	Ayuda
             </article>
             
             <footer>
@@ -222,10 +187,7 @@
                     <a href="#" data-view-section="ayuda" data-title="Ayuda" data-icon="medkit" data-label="Ayuda" class="active"></a>
                 </nav>
             </footer>
-        </section>
-        
-        
-        
+        </section>-->
         
         <script type="text/javascript" src="js/mustache.js"></script>
 		<script type="text/javascript" src="js/constantes.js"></script>
@@ -235,6 +197,7 @@
         <script src="app/eventos.js"></script>
         <script src="app/datos.js"></script>
         <script src="app/init.js"></script>
+        <script src="app/mensajes.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
